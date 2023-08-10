@@ -46,7 +46,8 @@ Work Day Scheduler is a web application designed to help you manage your work da
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-
 
 ![Screanshot of site](image.png)
+
+Github: https://github.com/brlumar/to_do_or_not_to_do
+Site: https://brlumar.github.io/to_do_or_not_to_do/
