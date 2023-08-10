@@ -3,7 +3,22 @@
 // in the html.
 var currentDay = $('#currentDay');
 var currentTime = $('#currentTime');
-var row = $('.time-block');
+var button9 = $('#button9');
+var button10 = $('#button10');
+var button11 = $('#button11');
+var button12 = $('#button12');
+var button13 = $('#button13');
+var button14 = $('#button14');
+var button15 = $('#button15');
+var button16 = $('#button16');
+var button17 = $('#button17');
+var textArray =[];
+
+var textArea9 = $('#text9');
+
+var data = ""; //empty string to hold data. may not be used in final due to the need for an array
+
+var row = $('.time-block'); //assigns a variable to the in the to later assign a color class to them based on the current time
 
 var currentHour = dayjs().hour(); //gets the current hour
 
@@ -24,13 +39,26 @@ function setColor() {
     var hour = parseInt($(this).attr("id").split("-")[1]);
     console.log('hour inside of function loop is:', hour);
 
+    if (hour < currentHour) {
+      $(this).addClass("past");
+    } else if (hour === currentHour) {
+      $(this).addClass("present");
+    } else {
+      $(this).addClass("future");
+    }
   })
+
 }
 
-setColor();
-// console.log(date.getHours());
-// currentDay = dayjs('2023-11-04').format('DD/MM/YYYY hh:mm:ss a'); //me playing with dayjs
-// console.log("today is", currentDay);
+
+
+
+function getInput(){
+var inputValue = textArea9.val();
+console.log("the text capture in 9 is:", inputValue);
+
+}
+
 
 
 
@@ -66,3 +94,47 @@ $(function () {
   //
   // TODO: Add code to display the current date in the header of the page.
 });
+
+
+
+//Start of the program
+setColor(); //runs code to set the color of the text area based on the hour
+
+
+button9.click(function () {
+  console.log("button9 was clicked");
+  getInput();
+});
+
+button10.click(function () {
+  console.log("button10 was clicked");
+});
+
+button11.click(function () {
+  console.log("button11 was clicked");
+});
+
+button12.click(function () {
+  console.log("button12 was clicked");
+});
+
+button13.click(function () {
+  console.log("button13 was clicked");
+});
+
+button14.click(function () {
+  console.log("button14 was clicked");
+});
+
+button15.click(function () {
+  console.log("button15 was clicked");
+});
+
+button16.click(function () {
+  console.log("button16 was clicked");
+});
+
+button17.click(function () {
+  console.log("button17 was clicked");
+});
+
