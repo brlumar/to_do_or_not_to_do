@@ -3,31 +3,32 @@
 // in the html.
 var currentDay = $('#currentDay');
 var currentTime = $('#currentTime');
+var row = $('.time-block');
 
-var hour = dayjs().hour(); //gets the current hour
+var currentHour = dayjs().hour(); //gets the current hour
 
 
 //Function that sets the current time. 
-setInterval(function() { 
+setInterval(function () {
   var dateInterval = dayjs(); //js constructor to create a new date object.
   currentTime.text(dateInterval.format('MMM,DD YYYY hh:mm:ss a'));
 }, 1000);
 
 
-console.log("the current hour:", hour);
+console.log("the current hour:", currentHour);
 
 //function to check the hours for comparison against the hours on the scheduler
-function getHour(){
+function setColor() {
+  row.each(function () {
+    console.log("inside of loop before hour is set");
+    var hour = parseInt($(this).attr("id").split("-")[1]);
+    console.log('hour inside of function loop is:', hour);
 
-
+  })
 }
 
-
-
+setColor();
 // console.log(date.getHours());
-
-
-
 // currentDay = dayjs('2023-11-04').format('DD/MM/YYYY hh:mm:ss a'); //me playing with dayjs
 // console.log("today is", currentDay);
 
@@ -48,12 +49,9 @@ $(function () {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
-  function getCurrentHour(){
 
 
-  }
-
-  function compareCurrentHour(){
+  function compareCurrentHour() {
 
 
   }
