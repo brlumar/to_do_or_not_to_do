@@ -1,6 +1,40 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+var currentDay = $('#currentDay');
+var currentTime = $('#currentTime');
+
+var hour = dayjs().hour(); //gets the current hour
+
+
+//Function that sets the current time. 
+setInterval(function() { 
+  var dateInterval = dayjs(); //js constructor to create a new date object.
+  currentTime.text(dateInterval.format('MMM,DD YYYY hh:mm:ss a'));
+}, 1000);
+
+
+console.log("the current hour:", hour);
+
+//function to check the hours for comparison against the hours on the scheduler
+function getHour(){
+
+
+}
+
+
+
+// console.log(date.getHours());
+
+
+
+// currentDay = dayjs('2023-11-04').format('DD/MM/YYYY hh:mm:ss a'); //me playing with dayjs
+// console.log("today is", currentDay);
+
+
+
+
+
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
@@ -14,6 +48,19 @@ $(function () {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
+  function getCurrentHour(){
+
+
+  }
+
+  function compareCurrentHour(){
+
+
+  }
+
+
+
+
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
