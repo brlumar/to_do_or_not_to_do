@@ -12,15 +12,37 @@ var button14 = $('#button14');
 var button15 = $('#button15');
 var button16 = $('#button16');
 var button17 = $('#button17');
-var textArray =[];
+
 
 var textArea9 = $('#text9');
+var textArea10 =$('#text10')
+var textArea11 =$('#text11')
+var textArea12 =$('#text12')
+var textArea13 =$('#text13')
+var textArea14 =$('#text14')
+var textArea15 =$('#text15')
+var textArea16 =$('#text16')
+var textArea17 =$('#text17')
+
+
 
 var data = ""; //empty string to hold data. may not be used in final due to the need for an array
 
 var row = $('.time-block'); //assigns a variable to the in the to later assign a color class to them based on the current time
 
 var currentHour = dayjs().hour(); //gets the current hour
+
+var textArray =[
+  {box: 9, text: ""},
+  {box: 10, text: ""},
+  {box: 11, text: ""},
+  {box: 12, text: ""},
+  {box: 13, text: ""},
+  {box: 14, text: ""},
+  {box: 15, text: ""},
+  {box: 16, text: ""},
+  {box: 17, text: ""},
+];
 
 
 //Function that sets the current time. 
@@ -57,11 +79,17 @@ function getInput(){
 var inputValue = textArea9.val();
 console.log("the text capture in 9 is:", inputValue);
 
+return inputValue;
 }
 
+function getInput2(areaNumber) {
+  var inputSelector = "textArea" + areaNumber;
+  var inputValue = textArea+areaNumber.val();
+  console.log("the inputSelector is", inputSelector)
+  console.log("the text captured is:", inputValue);
 
-
-
+  return inputValue;
+}
 
 
 $(function () {
@@ -103,38 +131,57 @@ setColor(); //runs code to set the color of the text area based on the hour
 
 button9.click(function () {
   console.log("button9 was clicked");
-  getInput();
+  textArray[0].text = textArea9.val();
+  console.log('the array says', textArray);
 });
 
 button10.click(function () {
-  console.log("button10 was clicked");
+  console.log("button9 was clicked");
+  textArray[1].text = textArea10.val();
+  console.log('the array says', textArray);
 });
 
 button11.click(function () {
   console.log("button11 was clicked");
+  textArray[2].text = textArea11.val();
+  console.log('the array says', textArray);
+  
 });
 
 button12.click(function () {
   console.log("button12 was clicked");
+  textArray[3].text = textArea12.val();
+  console.log('the array says', textArray);
+
 });
 
 button13.click(function () {
   console.log("button13 was clicked");
+  textArray[4].text = textArea13.val();
+  console.log('the array says', textArray);
 });
 
 button14.click(function () {
   console.log("button14 was clicked");
+  textArray[5].text = textArea14.val();
+  console.log('the array says', textArray);
 });
 
 button15.click(function () {
   console.log("button15 was clicked");
+  textArray[6].text = textArea15.val();
+  console.log('the array says', textArray);
 });
 
 button16.click(function () {
   console.log("button16 was clicked");
+  textArray[7].text = textArea16.val();
+  console.log('the array says', textArray);
 });
 
 button17.click(function () {
   console.log("button17 was clicked");
+  textArray[8].text = textArea17.val();
+  console.log('the array says', textArray);
 });
 
